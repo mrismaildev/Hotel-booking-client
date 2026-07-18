@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import { assets } from '../assets/assets';
+import { useClerk, useUser, UserButton } from '@clerk/react';
 
 const Navbar = () => {
   const navLinks = [
@@ -13,6 +14,9 @@ const Navbar = () => {
 
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const { openSignIn } = useClerk();
+  const { user } = useUser();
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -59,6 +63,7 @@ const Navbar = () => {
           className={`${isScrolled && 'invert'}  transition-all duration-500 h-7`}
         />
         <button
+          onClick={openSignIn}
           className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500 ${isScrolled ? 'text-white bg-black' : 'bg-white text-black'}`}
         >
           Login
