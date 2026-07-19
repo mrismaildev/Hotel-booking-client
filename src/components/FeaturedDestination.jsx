@@ -6,7 +6,7 @@ import Title from './Title';
 const FeaturedDestination = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col items-center px-6 md:px-16 lg:px-24 bg-slate-50 py-20">
+    <div className="flex flex-col items-center px-6 md:px-16 lg:px-24 xl:px-32 bg-slate-50 py-20">
       <Title
         title={'Featured Destination'}
         subTitle={
