@@ -1,6 +1,7 @@
 import ExculsiveOffers from '../components/ExculsiveOffers';
 import FeaturedDestination from '../components/FeaturedDestination';
 import Hero from '../components/Hero';
+import Teastimonial from '../components/Teastimonial';
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <Hero />
       <FeaturedDestination />
       <ExculsiveOffers />
+      <Teastimonial />
     </>
   );
 };
